@@ -50,27 +50,30 @@ let s:gui_foreground = "#D6D6D6"
 let s:gui_selection  = "#434343"
 let s:gui_line       = "#282a2e"
 let s:gui_comment    = "#585B5D"
+let s:gui_green      = "#B5BD68"
+let s:gui_red        = "#AF3D3D"
+let s:gui_orange     = "#DE935F"
 
 let s:palette.gui.background = { 'dark' : s:gui_background , 'light' : "#e4e4e4" }
 let s:palette.gui.foreground = { 'dark' : s:gui_foreground , 'light' : "#000000" }
 let s:palette.gui.selection  = { 'dark' : s:gui_selection  , 'light' : "#bcbcbc" }
 let s:palette.gui.line       = { 'dark' : s:gui_line       , 'light' : "#d0d0d0" }
 let s:palette.gui.comment    = { 'dark' : s:gui_comment    , 'light' : "#5f5f5f" }
-let s:palette.gui.red        = { 'dark' : "#AF3D3D"        , 'light' : "#5f0000" }
-let s:palette.gui.orange     = { 'dark' : "#de935f"        , 'light' : "#875f00" }
+let s:palette.gui.red        = { 'dark' : s:gui_red        , 'light' : "#5f0000" }
+let s:palette.gui.orange     = { 'dark' : s:gui_orange     , 'light' : "#875f00" }
 let s:palette.gui.yellow     = { 'dark' : "#f0c674"        , 'light' : "#5f5f00" }
-let s:palette.gui.green      = { 'dark' : "#b5bd68"        , 'light' : "#005f00" }
+let s:palette.gui.green      = { 'dark' : s:gui_green      , 'light' : "#005f00" }
 let s:palette.gui.aqua       = { 'dark' : "#8abeb7"        , 'light' : "#005f5f" }
 let s:palette.gui.blue       = { 'dark' : "#81a2be"        , 'light' : "#00005f" }
 let s:palette.gui.purple     = { 'dark' : "#b294bb"        , 'light' : "#5f005f" }
 let s:palette.gui.window     = { 'dark' : "#303030"        , 'light' : "#9e9e9e" }
 let s:palette.gui.darkcolumn = { 'dark' : "#1c1c1c"        , 'light' : "#808080" }
 let s:palette.gui.addbg      = { 'dark' : s:gui_background , 'light' : "#d7ffd7" }
-let s:palette.gui.addfg      = { 'dark' : "#b5bd68"        , 'light' : "#005f00" }
+let s:palette.gui.addfg      = { 'dark' : s:gui_green      , 'light' : "#005f00" }
 let s:palette.gui.changebg   = { 'dark' : s:gui_background , 'light' : "#d7d7ff" }
-let s:palette.gui.changefg   = { 'dark' : "#de935f"        , 'light' : "#5f005f" }
+let s:palette.gui.changefg   = { 'dark' : s:gui_orange     , 'light' : "#5f005f" }
 let s:palette.gui.delbg      = { 'dark' : s:gui_background , 'light' : "#ffd7d7" }
-let s:palette.gui.delfg      = { 'dark' : "#af3d3d"        , 'light' : "#BE4646" }
+let s:palette.gui.delfg      = { 'dark' : s:gui_red        , 'light' : "#BE4646" }
 let s:palette.gui.darkblue   = { 'dark' : "#00005f"        , 'light' : "#d7ffd7" }
 let s:palette.gui.darkcyan   = { 'dark' : "#005f5f"        , 'light' : "#005f00" }
 let s:palette.gui.darkred    = { 'dark' : "#5f0000"        , 'light' : "#d7d7ff" }
@@ -248,9 +251,9 @@ exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
 exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 "   Incsearch"
-exe "hi! LineNr"        .s:fg_selection   .s:bg_none        .s:fmt_none
+exe "hi! LineNr"        .s:fg_comment     .s:bg_none        .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! MatchParen"    .s:fg_background  .s:bg_changebg    .s:fmt_none
+exe "hi! MatchParen"    .s:fg_foreground  .s:bg_blue        .s:fmt_none
 exe "hi! ModeMsg"       .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! NonText"       .s:fg_selection   .s:bg_none        .s:fmt_none
